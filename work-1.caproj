@@ -15,6 +15,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
@@ -57,7 +58,18 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7203520413370909" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.152" y="0.144" />
+                            <point x="0.5" y="0.064" />
+                            <point x="0.736" y="0.264" />
+                            <point x="0.884" y="0.5" />
+                            <point x="0.768" y="0.768" />
+                            <point x="0.5" y="0.892" />
+                            <point x="0.188" y="0.812" />
+                            <point x="0.064" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -71,20 +83,37 @@
                 <instance-variable name="dmg" sid="2781959223185872" type="number" />
             </instance-variables>
             <behaviors>
-                <behavior-type name="Solid" sid="7529419173733943">
+                <behavior-type name="CustomMovement" sid="340407581016767">
+                    <behavior id="custom" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="3216448834582679">
                     <behavior id="solid" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4160214570529516" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.176" y="0.176" />
+                            <point x="0.5" y="0.052" />
+                            <point x="0.86" y="0.14" />
+                            <point x="0.904" y="0.5" />
+                            <point x="0.784" y="0.784" />
+                            <point x="0.5" y="0.916" />
+                            <point x="0.136" y="0.864" />
+                            <point x="0.032" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="9741607850625319">
+        <object-type name="Floor1" sid="9741607850625319">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="Platform" sid="3193954043636173">
+                <behavior-type name="Solid" sid="6412189087847804">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="7067259582145072">
                     <behavior id="Platform" />
                 </behavior-type>
             </behaviors>
@@ -92,8 +121,8 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8435553044594673" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0" y="0.888" />
-                            <point x="1" y="0.888001" />
+                            <point x="0" y="0.896" />
+                            <point x="1" y="0.896001" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
