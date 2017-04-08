@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>work-1</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>1yossrndg7qdy</unique-id>
+    <saved-with-version>17800</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">No</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder expanded="1">
+        <object-type name="Character" sid="8445982768886679">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="health" sid="8364179285533411" type="number" />
+                <instance-variable name="dmg" sid="3338449793084616" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="2181779692561525">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7203520413370909" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.152" y="0.144" />
+                            <point x="0.5" y="0.064" />
+                            <point x="0.736" y="0.264" />
+                            <point x="0.884" y="0.5" />
+                            <point x="0.768" y="0.768" />
+                            <point x="0.5" y="0.892" />
+                            <point x="0.188" y="0.812" />
+                            <point x="0.064" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="3453220409206948">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Enemy" sid="5421675318594154">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="health" sid="1927135715387618" type="number" />
+                <instance-variable name="dmg" sid="2781959223185872" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="CustomMovement" sid="340407581016767">
+                    <behavior id="custom" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="3216448834582679">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4160214570529516" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.176" y="0.176" />
+                            <point x="0.5" y="0.052" />
+                            <point x="0.86" y="0.14" />
+                            <point x="0.904" y="0.5" />
+                            <point x="0.784" y="0.784" />
+                            <point x="0.5" y="0.916" />
+                            <point x="0.136" y="0.864" />
+                            <point x="0.032" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Floor1" sid="9741607850625319">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="6412189087847804">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="7067259582145072">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8435553044594673" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.002" y="0" />
+                            <point x="0.002" y="0.898" />
+                            <point x="1" y="0.896" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="7261244175537852">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6396726990929953" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\User D\Pictures\pacman.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder expanded="1">
+        <layout>work-1.xml</layout>
+    </layout-folder>
+    <event-folder expanded="1">
+        <event-sheet>GameEvents.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="0" />
+    </global-instances>
+    <sounds-folder expanded="1" />
+    <music-folder expanded="1" />
+    <files-folder expanded="0">
+        <file-folder expanded="0" name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

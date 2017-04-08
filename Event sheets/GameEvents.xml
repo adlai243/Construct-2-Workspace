@@ -172,12 +172,36 @@
         <event-group description="" sid="9772879711708395" title="Die">
             <sub-events>
                 <event-block sid="5004489592611393">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="363425381417403" type="Character">
+                            <param id="0" name="Object">Enemy</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="2702750527851477" type="System" />
+                        <condition id="-8" name="Compare two values" sid="5990052023395274" type="System">
+                            <param id="0" name="First value">Character.Y</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">Enemy.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="6681039304097561" type="Enemy" />
+                    </actions>
                 </event-block>
                 <event-block sid="4632827315654727">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="4610122027780949" type="Character">
+                            <param id="0" name="Object">Enemy</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="1032370102801707" type="System" />
+                        <condition id="-8" name="Compare two values" sid="2288890032469633" type="System">
+                            <param id="0" name="First value">Character.Y</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">Enemy.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9658346944407526" type="Character" />
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
