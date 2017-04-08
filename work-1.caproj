@@ -12,10 +12,12 @@
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
@@ -54,6 +56,9 @@
             <behaviors>
                 <behavior-type name="Platform" sid="2181779692561525">
                     <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="8907520764157687">
+                    <behavior id="scrollto" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -132,11 +137,15 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="7261244175537852">
+        <object-type name="TiledBackground" sid="584852637790245">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\User D\Pictures\scene.png" />
+        </object-type>
+        <object-type name="Sprite" sid="3308138769629073">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6396726990929953" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\User D\Pictures\pacman.png" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="743071818233289" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
