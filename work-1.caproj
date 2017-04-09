@@ -107,9 +107,6 @@
                 <behavior-type name="Solid" sid="6412189087847804">
                     <behavior id="solid" />
                 </behavior-type>
-                <behavior-type name="Platform" sid="7067259582145072">
-                    <behavior id="Platform" />
-                </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8435553044594673" speed="5">
