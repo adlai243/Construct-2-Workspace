@@ -15,8 +15,8 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
-        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -88,27 +88,16 @@
                 <instance-variable name="dmg" sid="2781959223185872" type="number" />
             </instance-variables>
             <behaviors>
-                <behavior-type name="CustomMovement" sid="340407581016767">
-                    <behavior id="custom" />
-                </behavior-type>
                 <behavior-type name="Solid" sid="3216448834582679">
                     <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="7090144175587507">
+                    <behavior id="Bullet" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4160214570529516" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.176" y="0.176" />
-                            <point x="0.5" y="0.052" />
-                            <point x="0.86" y="0.14" />
-                            <point x="0.904" y="0.5" />
-                            <point x="0.784" y="0.784" />
-                            <point x="0.5" y="0.916" />
-                            <point x="0.136" y="0.864" />
-                            <point x="0.032" y="0.5" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -126,12 +115,10 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8435553044594673" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.002" y="0" />
-                            <point x="0.002" y="0.898" />
-                            <point x="1" y="0.896" />
+                            <point x="0" y="0.9" />
+                            <point x="0.992" y="0.904" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
-                            <point x="0" y="0" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -141,11 +128,69 @@
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\User D\Pictures\scene.png" />
         </object-type>
-        <object-type name="Sprite" sid="3308138769629073">
+        <object-type name="Center" sid="1225653236054719">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="1385807125837476">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="5561273082313217">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="743071818233289" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5545460119631519" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Obstacule1" sid="340263095241925">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="6138119637404591">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3888997682465622" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.5" y="0.5" />
+                            <point x="0.5" y="0.496" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.496" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Obstacule2" sid="9914505571487522">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="8632875214636673">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1192990891723889" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0.5" />
+                            <point x="0.504" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
