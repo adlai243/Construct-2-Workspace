@@ -4,7 +4,7 @@
     <name>GameEvents</name>
     <events>
         <variable constant="0" name="Facing" sid="6891326125166278" static="0" type="number">1</variable>
-        <event-group description="Character" sid="8269038356213509" title="You">
+        <event-group collapsed="1" description="Character" sid="8269038356213509" title="You">
             <sub-events>
                 <event-block sid="4113570285151284">
                     <conditions>
@@ -25,7 +25,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="NO S :v" sid="7967407597133737" title="WASD">
+        <event-group description="NO S :v" sid="7967407597133737" title="WASD">
             <sub-events>
                 <event-block sid="6727549521936269">
                     <conditions>
@@ -37,7 +37,7 @@
                         <action behavior="Platform" id="7" name="Simulate control" sid="7262062464612834" type="Character">
                             <param id="0" name="Control">0</param>
                         </action>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="7349221399983399" type="Center">
+                        <action behavior="Platform" id="7" name="Simulate control" sid="7349221399983399" type="YouDied">
                             <param id="0" name="Control">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="5597171013909297" type="System">
@@ -56,9 +56,6 @@
                         <action behavior="Platform" id="7" name="Simulate control" sid="9537572507574462" type="Character">
                             <param id="0" name="Control">2</param>
                         </action>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="7563948381209678" type="Center">
-                            <param id="0" name="Control">2</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="63424356542946">
@@ -71,12 +68,12 @@
                         <action behavior="Platform" id="7" name="Simulate control" sid="77097390499109" type="Character">
                             <param id="0" name="Control">1</param>
                         </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="7881562476642228" type="YouDied">
+                            <param id="0" name="Control">1</param>
+                        </action>
                         <action id="-9" name="Set value" sid="1080818877339843" type="System">
                             <param id="0" name="Variable">Facing</param>
                             <param id="1" name="Value">1</param>
-                        </action>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="7881562476642228" type="Center">
-                            <param id="0" name="Control">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -115,6 +112,16 @@
                     <actions>
                         <action behavior="Platform" id="7" name="Simulate control" sid="2762897506995111" type="Character">
                             <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8343002828160462" type="YouDied">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5518955815830061" type="Character">
+                            <param id="0" name="Instance variable">alive</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9007922773133144" type="Character">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -178,7 +185,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="9772879711708395" title="Die">
+        <event-group description="" sid="9772879711708395" title="Die">
             <sub-events>
                 <event-block sid="5004489592611393">
                     <conditions>
@@ -193,7 +200,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="6681039304097561" type="Enemy" />
+                        <action id="-9" name="Destroy" sid="9216720809418104" type="Enemy" />
                     </actions>
                 </event-block>
                 <event-block sid="4632827315654727">
@@ -210,7 +217,64 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="9658346944407526" type="Character" />
+                        <action id="-12" name="Subtract from" sid="2710142246576824" type="Character">
+                            <param id="0" name="Instance variable">alive</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
+                </event-block>
+                <event-block sid="1009786822051274">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="2346350478771825" type="Character" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6079568579502627" type="YouDied">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="801975663238891">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="6603547128813854">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="5611872232822353" type="Character">
+                    <param id="0" name="Instance variable">alive</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="5262668192910699" type="Character">
+                    <param id="0" name="Object">Character</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">Character.Y </param>
+                </action>
+                <action id="-15" name="Set visible" sid="4185602549639768" type="Character">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="6933808402935384" title="End">
+            <sub-events>
+                <event-block sid="7087763212566778">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="6009555407371379" type="Sprite">
+                            <param id="0" name="Object">Character</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="4086396150198075" type="YouWon">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3033273918416985">
+                    <conditions />
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>

@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
@@ -50,7 +51,7 @@
         <object-type name="Character" sid="8445982768886679">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="health" sid="8364179285533411" type="number" />
+                <instance-variable name="alive" sid="8364179285533411" type="number" />
                 <instance-variable name="dmg" sid="3338449793084616" type="number" />
             </instance-variables>
             <behaviors>
@@ -65,14 +66,17 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7203520413370909" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.152" y="0.144" />
-                            <point x="0.5" y="0.064" />
-                            <point x="0.736" y="0.264" />
-                            <point x="0.884" y="0.5" />
-                            <point x="0.768" y="0.768" />
-                            <point x="0.5" y="0.892" />
-                            <point x="0.188" y="0.812" />
-                            <point x="0.064" y="0.5" />
+                            <point x="0.264" y="0.264" />
+                            <point x="0.5" y="0.196" />
+                            <point x="0.748" y="0.296" />
+                            <point x="0.494" y="0.587999" />
+                            <point x="0.902999" y="0.621" />
+                            <point x="0.830499" y="0.817" />
+                            <point x="0.678" y="0.951" />
+                            <point x="0.491" y="0.999" />
+                            <point x="0.304" y="0.949" />
+                            <point x="0.168" y="0.832" />
+                            <point x="0.104" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -97,7 +101,21 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4160214570529516" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.364" y="1" />
+                            <point x="0.0560009" y="0.668" />
+                            <point x="0.0997507" y="0.4255" />
+                            <point x="0.2635" y="0.239" />
+                            <point x="0.476376" y="0.20175" />
+                            <point x="0.665251" y="0.2685" />
+                            <point x="0.838126" y="0.46325" />
+                            <point x="0.811" y="0.746" />
+                            <point x="0.53" y="1" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -124,29 +142,6 @@
         <object-type name="TiledBackground" sid="584852637790245">
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\User D\Pictures\scene.png" />
-        </object-type>
-        <object-type name="Center" sid="1225653236054719">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="ScrollTo" sid="1385807125837476">
-                    <behavior id="scrollto" />
-                </behavior-type>
-                <behavior-type name="Platform" sid="5561273082313217">
-                    <behavior id="Platform" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5545460119631519" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
         </object-type>
         <object-type name="Obstacule1" sid="340263095241925">
             <plugin id="Sprite" />
@@ -190,6 +185,28 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="YouDied" sid="4898285082192884">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Platform" sid="4198815837004431">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="4688299661335915">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Sprite" sid="1900750436467937">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6354402456638691" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="YouWon" sid="4943858606446062">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />
