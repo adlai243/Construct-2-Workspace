@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameEvents</name>
+    <events>
+        <variable constant="0" name="Facing" sid="6891326125166278" static="0" type="number">1</variable>
+        <event-group collapsed="1" description="Character" sid="8269038356213509" title="You">
+            <sub-events>
+                <event-block sid="4113570285151284">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4450174286146598" type="System">
+                            <param id="0" name="Variable">Facing</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Set collisions enabled" sid="1199187718679337" type="Character">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="8346644892373811" type="Enemy">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="NO S :v" sid="7967407597133737" title="WASD">
+            <sub-events>
+                <event-block sid="6727549521936269">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="7628800706013586" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="7262062464612834" type="Character">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="7349221399983399" type="YouDied">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5597171013909297" type="System">
+                            <param id="0" name="Variable">Facing</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="621414925026757">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="8732322778139931" type="Keyboard">
+                            <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="9537572507574462" type="Character">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="63424356542946">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="6179319645171773" type="Keyboard">
+                            <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="77097390499109" type="Character">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="7881562476642228" type="YouDied">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1080818877339843" type="System">
+                            <param id="0" name="Variable">Facing</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5849462465617445">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="1068036808542192" type="Keyboard">
+                            <param id="0" name="Key">83 (S)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="12" name="Fall through" sid="8707491255953336" type="Character" />
+                    </actions>
+                </event-block>
+                <event-block sid="6932873674878265">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="5870447288545462" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="3787932511213305" type="Character">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7930538751296371" type="System">
+                            <param id="0" name="Variable">Facing</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1313560587819816">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="8314133908306134" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="2762897506995111" type="Character">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8343002828160462" type="YouDied">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5518955815830061" type="Character">
+                            <param id="0" name="Instance variable">alive</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3998546069220765">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="2013099340875446" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="6660434459194128" type="Character">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6515705598420598" type="System">
+                            <param id="0" name="Variable">Facing</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3927211575585874">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="3456777560397685" type="Keyboard">
+                            <param id="0" name="Key">40 (Down arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="12" name="Fall through" sid="9478681429158806" type="Character" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="9147995141437186" title="Facing">
+            <sub-events>
+                <event-block sid="4338329447538544">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="635440977961061" type="System">
+                            <param id="0" name="Variable">Facing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="865232644573014" type="Character">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="131422052931915">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8744932174347891" type="System">
+                            <param id="0" name="Variable">Facing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="17600135927069" type="Character">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="9772879711708395" title="Die">
+            <sub-events>
+                <event-block sid="5004489592611393">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="363425381417403" type="Character">
+                            <param id="0" name="Object">Enemy</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="2702750527851477" type="System" />
+                        <condition id="-8" name="Compare two values" sid="5990052023395274" type="System">
+                            <param id="0" name="First value">Character.Y</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">Enemy.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9216720809418104" type="Enemy" />
+                    </actions>
+                </event-block>
+                <event-block sid="4632827315654727">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="4610122027780949" type="Character">
+                            <param id="0" name="Object">Enemy</param>
+                        </condition>
+                        <condition id="-1" name="Every tick" sid="1032370102801707" type="System" />
+                        <condition id="-8" name="Compare two values" sid="2288890032469633" type="System">
+                            <param id="0" name="First value">Character.Y</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">Enemy.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9658346944407526" type="Character" />
+                        <action id="-12" name="Subtract from" sid="2710142246576824" type="Character">
+                            <param id="0" name="Instance variable">alive</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1009786822051274">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="2346350478771825" type="Character" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6079568579502627" type="YouDied">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="801975663238891">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="6603547128813854">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="5611872232822353" type="Character">
+                    <param id="0" name="Instance variable">alive</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="5262668192910699" type="Character">
+                    <param id="0" name="Object">Character</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">Character.Y </param>
+                </action>
+                <action id="-26" name="Move to layer" sid="7359747369857756" type="Character">
+                    <param id="0" name="Layer">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="5725153069208964" type="Character">
+                    <param id="0" name="Instance variable">alive</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="6933808402935384" title="End">
+            <sub-events>
+                <event-block sid="7087763212566778">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="6009555407371379" type="Sprite">
+                            <param id="0" name="Object">Character</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="4086396150198075" type="YouWon">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3033273918416985">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
