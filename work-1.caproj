@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
@@ -207,6 +208,9 @@
         </object-type>
         <object-type name="YouWon" sid="4943858606446062">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="TextBox" sid="1244902417863163">
+            <plugin id="TextBox" />
         </object-type>
     </object-folder>
     <families />
