@@ -121,10 +121,12 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8435553044594673" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0" y="0.896" />
-                            <point x="1" y="0.896001" />
+                            <point x="0.004" y="0.896001" />
+                            <point x="0.116" y="0.896" />
+                            <point x="1" y="0.896" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
+                            <point x="0.008" y="0" />
                         </collision-poly>
                     </frame>
                 </animation>
